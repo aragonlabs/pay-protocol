@@ -4,7 +4,8 @@
   "description": "Protocol to make crypto p2p payments take over the world",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "truffle develop",
+    "test": "truffle test"
   },
   "author": "Jorge Izquierdo <jorge@aragon.one>",
   "license": "GPL-3.0",
