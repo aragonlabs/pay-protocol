@@ -1,0 +1,16 @@
+{
+  "name": "pay-protocol",
+  "version": "1.0.0",
+  "description": "Protocol to make crypto p2p payments take over the world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Izquierdo <jorge@aragon.one>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@aragon/apps-token-manager": "^1.0.1",
+    "@aragon/core": "^2.0.1",
+    "truffle": "^4.0.4"
+  }
+}
