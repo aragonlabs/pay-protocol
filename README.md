@@ -1,6 +1,8 @@
 # Pay protocol
 (provisional name)
 
+Everything in this repo isn't more than a research exercise.
+
 ## Help
 
 Until [aragon-core#160](https://github.com/aragon/aragon-core/pull/160) is
