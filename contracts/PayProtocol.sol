@@ -48,6 +48,7 @@ contract PayProtocol is App, SignCheck, PayConstants {
 
     // Deposit in contract: when from == to, pull = true, push = false, value is deposited
     // Withdraw from contract: when from == to, pull = false, push = true, value is withdrawn
+    // TODO: Add chainId to exec
     function exec(
         ERC20 token,
         address from,

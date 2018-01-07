@@ -16,7 +16,7 @@ contract Airdrop {
     uint256 constant public DAO_TOKENS = 50; // On mint, DAO ends with x% of supply
     uint256 constant PERCENT = 100;
 
-    uint256 constant public END = 123456; // timestamp for airdrop end
+    uint256 constant public END = 123456; // TODO: Set timestamp for airdrop end
 
     uint256 tbm; // to be minted
     bool minted;
