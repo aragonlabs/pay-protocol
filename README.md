@@ -55,13 +55,13 @@ than myself are working on it and multiple solutions with different tradeoffs wi
 
 The **volatility** problem is being solved by the brilliant [Maker team](https://makerdao.com) who are
 building the [Dai](https://vimeo.com/247715549) stablecoin, which is a super collateralized coin that holds
-a trustless peg to 1 USD. Significant improvement needs to happen for Dai to become the world's currency
+a trustless peg to 1 USD. Significant improvements need to happen for Dai to become the world's currency
 but I consider this a solved problem being worked on by a world class team engineers and economisms.
 
-This protocol attempts to solve the last too, introducing a governance token to try to kickstart the **network
+This protocol attempts to solve the last two, introducing a governance token to try to kickstart the **network
 effect** (no ICO needed to kickstart the token supply) and save the user acquisition costs by using tokenomics.
 
-Also presents a significant **UX** improvement by allowing Dai (any ERC20/777 token actually) transfers without
+Also presents a significant **UX** improvement by allowing Dai (and any ERC20/777 token actually) transfers without
 ownining any ether, as well as the cheapest way to transact with tokens in the Ethereum network. The protocol allows
 to pay transfer fees in whatever token the user is transacting with. All these while end users being the 
 custodial of all their crypto money, which no third party can take away from them.
@@ -82,7 +82,7 @@ make it successful.
 
 No ICO nor any type of crowdfunding should be needed to bootstrap the network.
 
-## Help
+## Troubleshooting
 
 Until [aragon-core#160](https://github.com/aragon/aragon-core/pull/160) is
 properly fixed and merged, to compile manually loose versions of dependency
