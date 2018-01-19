@@ -32,12 +32,12 @@ purpose of this effort.
 ## Why aren't we using crypto as money today
 
 - **Network scalability**: Do we pay for coffee on or off-chain? Do hundreds of thousands
-of computers world wide process every transaction happening? What is the 'correct'
-tradeoff between security and usability (in terms of fees)
+of computers world wide need to process every transaction happening in the world economy?
+What is the 'correct' tradeoff between security and usability (in terms of fees)
 
 - **Volatility**: High volatily makes crypto a really poor unit of account for day to day use.
 A currency that is stable to people's spending basket is needed for crypto to flourish beyond
-speculation and long term store of value.
+speculation and long term store of value. 
 
 - **Network effect**: The classic chicken-and-egg problem. No incentive to use it until people you
 transact with use it and accept it too. Once a threshold is passed, the network effect will do the
@@ -59,20 +59,21 @@ a trustless peg to 1 USD. Significant improvement needs to happen for Dai to bec
 but I consider this a solved problem being worked on by a world class team engineers and economisms.
 
 This protocol attempts to solve the last too, introducing a governance token to try to kickstart the **network
-effect** (no ICO needed to kickstart the token supply) and save the user acquisition costs by tokenomics.
+effect** (no ICO needed to kickstart the token supply) and save the user acquisition costs by using tokenomics.
 
 Also presents a significant **UX** improvement by allowing Dai (any ERC20/777 token actually) transfers without
 ownining any ether, as well as the cheapest way to transact with tokens in the Ethereum network. The protocol allows
-to pay transfer fees in whatever token the user is transacting with.
+to pay transfer fees in whatever token the user is transacting with. All these while end users being the 
+custodial of all their crypto money, which no third party can take away from them.
 
-Token holders will govern a DAO that will own a significant part of the initial token supply. By voting
-DAO token holders should grant tokens to stakeholders that have or will build amazing user experiences for 
-using crypto payments everywhere. As a client implementation of the protocol, the developers have the opportunity
-to charge transaction fees on transfer settlement.
+Token holders will govern a DAO that will own a significant part of the initial token supply. By voting,
+DAO token holders should grant tokens to stakeholders that built or will build amazing user experiences for 
+using crypto payments everywhere using the protocol. Client implementations of the protocol have the opportunity
+to charge transaction fees on transfer settlement for users that don't want to own ether.
 
 ## Team
 
-There will be no team. Unfortunately no advisors either.
+There will be no team. Fortunately no advisors either.
 
 The protocol shouldn't need a team to succeed.
 
