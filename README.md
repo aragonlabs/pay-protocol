@@ -11,7 +11,7 @@ but I'm scared to death at the possibility of **not being able** to use it when 
 Cash is anonymous, hardly traceable and allows free trade between free humans.
 
 The eradication of the physical form of money will convert money in a purely
-information network. Information can be and is censor everyday.
+information network. Information can be censored.
 
 Censoring speech is a horrible thing that shouldn't happen in advanced societies
 but unfortunately it happens in every country in the world, every day.
