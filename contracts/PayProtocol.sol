@@ -41,10 +41,12 @@ contract PayProtocol is App, SignCheck, PayConstants {
         bytes32 hash
     );
 
+    /*
     function PayProtocol(TokenManager _manager) {
         manager = _manager;
         govToken = ERC20(manager.token());
     }
+    */
 
     // Deposit in contract: when from == to, pull = true, push = false, value is deposited
     // Withdraw from contract: when from == to, pull = false, push = true, value is withdrawn
@@ -154,6 +156,10 @@ contract PayProtocol is App, SignCheck, PayConstants {
         LogTransfer(govToken, address(0), coinbase, reward, false, false, bytes32(0));
     }
 
+    function balance(address token, address holder) public view returns (uint256) {
+        return accounts[holder].balance[token];
+    }
+
     function unflattenDeps(bytes32[] flatDeps, uint[] lengths) internal returns (bytes32[][]) {
         // TODO: check array bounds
         bytes32[][] memory unflattened = new bytes32[][](lengths.length);
@@ -182,7 +188,7 @@ contract PayProtocol is App, SignCheck, PayConstants {
     }
 
     function getHash(address token, address from, address to, uint256 value, uint256 expires, bool pull, bool push, bytes32[] deps) view public returns (bytes32) {
-        return keccak256(SCHEMA_HASH, this, token, from, to, value, expires, pull, push, deps);
+        return keccak256(SCHEMA_HASH, keccak256(this, token, from, to, value, expires, pull, push, keccak256(deps)));
     }
 
     function time() internal view returns (uint64) { return uint64(now); }

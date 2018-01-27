@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "truffle develop",
-    "test": "truffle test"
+    "test": "npm run ganache-cli:dev && truffle test --network rpc",
+    "console": "node_modules/.bin/truffle console",
+    "ganache-cli:dev": "scripts/ganache-cli.sh"
   },
   "author": "Jorge Izquierdo <jorge@aragon.one>",
   "license": "GPL-3.0",
   "dependencies": {
     "@aragon/apps-token-manager": "^1.0.1",
     "@aragon/core": "^2.0.1",
+    "ethereumjs-abi": "^0.6.5",
     "truffle": "^4.0.4"
   }
 }
