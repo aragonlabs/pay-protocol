@@ -1,4 +1,4 @@
-const { signTypedData, typedSignatureHash } = require('eth-sig-util')
+const { typedSignatureHash } = require('eth-sig-util')
 const { soliditySHA3 } = require('ethereumjs-abi')
 
 class Transfer {
@@ -14,7 +14,7 @@ class Transfer {
         this.from = from
     }
 
-    transferHash(from = null) {
+    transferHash(from) {
         if (from != null) {
             this.from = from
         }
@@ -26,7 +26,6 @@ class Transfer {
     // 'address protocol', 'address token', 'address from', 'address to', 'uint256 value', 'uint256 expires', 'bool pull', 'bool push', 'bytes32[] deps'
 
     typedData() {
-        console.log('the dep hash', this.depsHash())
         return [
             { type: 'address', name: 'protocol', value: this.protocol },
             { type: 'address', name: 'token', value: this.token },

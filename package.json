@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "truffle develop",
     "test": "npm run ganache-cli:dev && truffle test --network rpc",
-    "console": "node_modules/.bin/truffle console",
     "ganache-cli:dev": "scripts/ganache-cli.sh"
   },
   "author": "Jorge Izquierdo <jorge@aragon.one>",
@@ -16,5 +15,8 @@
     "@aragon/core": "^2.0.1",
     "ethereumjs-abi": "^0.6.5",
     "truffle": "^4.0.4"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.0.3"
   }
 }
