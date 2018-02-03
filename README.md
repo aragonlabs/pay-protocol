@@ -71,6 +71,20 @@ DAO token holders should grant tokens to stakeholders that built or will build a
 using crypto payments everywhere using the protocol. Client implementations of the protocol have the opportunity
 to charge transaction fees on transfer settlement for users that don't want to own ether.
 
+## Technical overview
+
+At the technical level there are two main features of the protocol.
+
+- An incentivization layer that mints PAY tokens to reward protocol usage.
+- A token transferring and accounting layer that allows for super cheap token transfers.
+
+### Token transferring layer
+
+The token transferring layer:
+
+- Allows token owners to pay for transaction fees using any token, by incentivizing other entities to settle token transfers in exchange for a fee. This effectively allows users to own and use their tokens without ever needing any ETH.
+- By keeping its own internal accounting of account balances in every token, it allows for really gas optimized token transfers.
+
 ## Team
 
 There will be no team. Fortunately no advisors either.
