@@ -51,17 +51,7 @@ contract PayProtocol is App, SignCheck, PayConstants {
     // Deposit in contract: when from == to, pull = true, push = false, value is deposited
     // Withdraw from contract: when from == to, pull = false, push = true, value is withdrawn
     // TODO: Add chainId to exec
-    function exec(
-        ERC20 token,
-        address from,
-        address to,
-        uint256 value,
-        uint64 expires,
-        bool pull,
-        bool push,
-        bytes32[] deps,
-        bytes sig
-    ) public {
+    function exec(ERC20 token, address from, address to, uint256 value, uint64 expires, bool pull, bool push, bytes32[] deps, bytes sig) public {
         bytes32 hash = getHash(token, from, to, value, expires, pull, push, deps);
         require(from == getSigner(hash, sig) && from != address(0));
         require(expires > time());
