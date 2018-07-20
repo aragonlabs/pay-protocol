@@ -78,6 +78,11 @@ At the technical level there are two main features of the protocol.
 - An incentivization layer that mints PAY tokens to reward protocol usage.
 - A token transferring and accounting layer that allows for super cheap token transfers.
 
+
+[ ![Imgur](https://i.imgur.com/sxCYbCn.jpg) ](https://youtu.be/ik1VlTgD53w?t=7m31s)
+
+Technical explanation starts at 7m31s: https://youtu.be/ik1VlTgD53w?t=7m31s
+
 ### Token transferring layer
 
 The token transferring layer:
