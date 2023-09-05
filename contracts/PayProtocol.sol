@@ -53,12 +53,13 @@ contract PayProtocol is App, SignCheck, PayConstants {
     // TODO: Add chainId to exec
     function exec(ERC20 token, address from, address to, uint256 value, uint64 expires, bool pull, bool push, bytes32[] deps, bytes sig) public {
         bytes32 hash = getHash(token, from, to, value, expires, pull, push, deps);
-        require(from == getSigner(hash, sig) && from != address(0));
+        require(from == getSigner(hash, sig))
+        require(from != address(0));
         require(expires > time());
         require(!usedHashes[hash]);
 
         // A tx can execute only if a previous transfer occurred
-        for (uint i = 0; i < deps.length; i++) {
+        for (uint i; i < deps.length; i++) {
             require(usedHashes[deps[i]]);
         }
 
@@ -115,7 +116,7 @@ contract PayProtocol is App, SignCheck, PayConstants {
         bytes32[][] memory unflattenedDeps = unflattenDeps(flatDeps, depsLengths);
         bytes[] memory unflattedSigs = unflattenSigs(flatSigs, sigLengths);
 
-        for (uint i = 0; i < tokens.length; i++) {
+        for (uint i; i < tokens.length; i++) {
             exec(
                 tokens[i],
                 from[i],
@@ -153,10 +154,10 @@ contract PayProtocol is App, SignCheck, PayConstants {
     function unflattenDeps(bytes32[] flatDeps, uint[] lengths) internal returns (bytes32[][]) {
         // TODO: check array bounds
         bytes32[][] memory unflattened = new bytes32[][](lengths.length);
-        uint256 needle = 0;
-        for (uint256 i = 0; i < lengths.length; i++) {
+        uint256 needle;
+        for (uint256 i; i < lengths.length; i++) {
             bytes32[] memory deps = new bytes32[](lengths[i]);
-            for (uint256 j = 0; j < lengths[i]; j++) {
+            for (uint256 j; j < lengths[i]; j++) {
                 deps[j] = flatDeps[needle + j];
             }
             needle += lengths[i];
@@ -168,8 +169,8 @@ contract PayProtocol is App, SignCheck, PayConstants {
 
     function unflattenSigs(bytes flatSigs, uint[] lengths) internal returns (bytes[]) {
         bytes[] memory unflattened = new bytes[](lengths.length);
-        uint256 needle = 0;
-        for (uint256 i = 0; i < lengths.length; i++) {
+        uint256 needle;
+        for (uint256 i; i < lengths.length; i++) {
             unflattened[i] = flatSigs.slice(needle, lengths[i]);
             needle += lengths[i];
         }
